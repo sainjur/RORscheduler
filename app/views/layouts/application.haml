@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %title= "Deerwalk Inc. "
+    =stylesheet_link_tag 'sass/application'
+  %body
+    =render :partial=>'layouts/header'
+    #content= yield
+    =render :partial=>'layouts/footer'

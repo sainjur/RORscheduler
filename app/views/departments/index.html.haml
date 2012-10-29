@@ -1,0 +1,15 @@
+.maincont
+  %h3= "List of Departments"
+  - if @departments.count > 0
+    %table
+      %caption Departments
+      %thead
+        %tr
+          %th SN
+          %th Name
+      %tbody
+        = render :partial => "list", :collection => @departments
+  - else
+    %p The departments list is empty
+  
+  = link_to "Create New", new_department_path 
